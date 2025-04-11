@@ -1,6 +1,6 @@
 import React from "react";
 import "./index.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
 import Mainpage from "./Components/Mainpage";
 import Wordle from "./Components/Wordle";
@@ -32,7 +32,6 @@ function App() {
           <Route path="/rock" element={<Rock />} />
           <Route path="/guess" element={<Guess />} />
           <Route path="/typing" element={<Typing />} />
-
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
