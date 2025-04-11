@@ -51,7 +51,7 @@ const Tiles = () => {
     setSelected((prev) => {
       const newSelected = [...prev, id];
       if (newSelected.length === 2) {
-        setMove((c) => c + 1 / 2);
+        setMove((c) => c + 1);
       }
       return newSelected;
     });
@@ -82,7 +82,7 @@ const Tiles = () => {
           </div>
         ))}
       </div>
-      <p>moves : {move}</p>
+      <p>moves : {Math.round(move / 2)}</p>
 
       {tiles.filter((tile) => tile.matched).length === symbols.length * 2 && (
         <div className="bg-red-500 p-6 fixed mt-36 flex flex-col items-center rounded-lg shadow-lg">
